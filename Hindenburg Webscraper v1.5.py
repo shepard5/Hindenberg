@@ -3,8 +3,8 @@ from bs4 import BeautifulSoup
 import alpaca_trade_api as tradeapi
 import time
 
-API_KEY = 'PKS74LQEHUGE2WKK2PLM'
-API_SECRET = 'jCmYfjwH8xyfW1UeVahtxJaykQi2VdXAfLwJhNtm'
+API_KEY = 'YOUR ALPACA API KEY'
+API_SECRET = 'YOUR PERSONAL ALPACA SECRET'
 BASE_URL = 'https://paper-api.alpaca.markets'
 
 ## "https://hindenburgresearch.com/"
