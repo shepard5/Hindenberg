@@ -2,6 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import alpaca_trade_api as tradeapi
 import time
+import yfinance as yf
 
 API_KEY = 'YOUR ALPACA API KEY'
 API_SECRET = 'YOUR PERSONAL ALPACA SECRET'
@@ -75,22 +76,24 @@ def scrape_eighth_link(url):
 #condition that their generic tag stating their initial disclosure is present in the article.
 
 # Initialize the API client
-    api = tradeapi.REST(API_KEY, API_SECRET, base_url=BASE_URL, api_version='v2')
+#    api = tradeapi.REST(API_KEY, API_SECRET, base_url=BASE_URL, api_version='v2')
 
     
 # Get the latest price and volume of the stock
-    ticker = ticker
-    latest_quote = api.get_latest_quote(ticker)
-    latest_price = latest_quote.bp
-    #latest_volume = latest_quote.as
-    latest_quote = api.get_latest_quote(ticker)
-    ask_size = getattr(latest_quote, 'as')
+#    ticker = ticker
+#    latest_quote = api.get_latest_quote(ticker)
+#    latest_price = latest_quote.bp
+#    #latest_volume = latest_quote.as
+#    latest_quote = api.get_latest_quote(ticker)
+#    ask_size = getattr(latest_quote, 'as')
+
+ticker_data = yf.Ticker(ticker)
+current_price = ticker.info["regularMarketPrice"]
 
     
-    print(latest_quote)
 # Determine size of position based on stock price
     principal = 3000.0
-    share_quantity = principal//latest_price
+    share_quantity = principal//current_price
 
 # Check if the condition is met
     if position == 1:
