@@ -5,5 +5,5 @@ Within the script there are a few different components. After running, the scrip
 
 It's worth noting that this script is currently set to assume what I believe is a static 10% drop in the underlying stock's price - this probably isn't suitable in all cases - steps should be taken to incorporate the user's (you) risk tolerance into the position taken to ensure and this can be done by altering the code in the script (note for myself : insert lines here for user altering the script).
 
-Disclaimer: I am not a registered financial advisor and none of this information should be taken as financial advice. The script provided is for educational purposes only and should only be used for paper trading and never on a live trading platform. Let's get this bread.</p>
+I am not a licensed financial advisor and none of this information should be taken as financial advice. The script provided is for educational purposes only and should only be used for paper trading, not on a live trading platform.</p>
 
