@@ -1,7 +1,6 @@
-# This function begins the looping of the program and will end under
-# the circumstance that HindenBurg Research publishes a new report on their
-# website, the program may or may not enter a position depending on a few
-# variables
+# This script repeatedly refreshes http://hindenburgresearch.com/ until Hindenburg Research publishes a new report 
+# Just tweak the code in Hindenburg_Enter_Position, specifically under the tradeapi.submit_order field to fit your order, 
+# fill in Alpaca API information with your key and secret, and execute the Hindenburg() function in IDLE
 from bs4 import BeautifulSoup
 import requests
 import time
