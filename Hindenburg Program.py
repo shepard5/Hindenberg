@@ -24,11 +24,10 @@ def Hindenburg():
         soup = BeautifulSoup(response.content, "html.parser")
         if i == 0:
             first_body_text = soup.body.get_text()
-            print(first_body_text)
             i=1   
-        if i == 1:
+        if i==1
             refreshed_body_text = soup.body.get_text() 
-        if first_body_text == refreshed_body_text:
+        if first_body_text != refreshed_body_text:
             ticker = ticker_search(refreshed_body_text)
             position = Hindenburg_Position(refreshed_body_text)
             Hindenburg_Enter_Position(position, ticker)
