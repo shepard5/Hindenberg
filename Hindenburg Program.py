@@ -6,7 +6,7 @@ import requests
 import time
 import alpaca_trade_api as tradeapi
 import yfinance as yf
-
+from datatime import datatime
 api = tradeapi.REST('YOUR_API_KEY', 'YOUR_API_SECRET', base_url='https://paper-api.alpaca.markets')
 
 def Hindenburg():
@@ -32,10 +32,11 @@ def Hindenburg():
             position = Hindenburg_Position(refreshed_body_text)
             Hindenburg_Enter_Position(position, ticker)
             break
-        time.sleep(1)
+        current_time = datetime.now()
+        print("Hindenburg hasn't published as of " + current_time + "!")
         z = z+1
-        print(z)
-        
+        print("Repeated "+ z + " times")
+        time.sleep(1)
 
 def Hindenburg_Position(body_text):
     search_string = "Initial Disclosure: After extensive research, we have taken a short position"
