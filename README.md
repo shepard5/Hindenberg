@@ -7,3 +7,4 @@ Steps should be taken to incorporate the user's (you) risk tolerance into the po
 
 I am not a licensed financial advisor - none of this information should be taken as financial advice. The script provided is for educational purposes and should be used for paper trading, not on a live trading platform.</p>
 
+Converting to C++ soon for low latency execution - necesssary for markets with near instantaneous reactions
